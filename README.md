@@ -36,13 +36,13 @@ noisy/reverb/BWE, ESTOI for AEC):
 
 ### How the AEC condition is built
 
-For every test utterance the **near-end speech**, the **far-end speech** that is
-played out, the **room impulse response (RIR)** and the **signal-to-echo ratio
+For every test utterance the **near-end speech**, the **far-end speech** to be
+transmitted, the **room impulse response (RIR)** and the **signal-to-echo ratio
 (SER, −20 to 10 dB)** are fixed once and shared by all systems. What differs is
-only the far-end waveform that actually reaches the loudspeaker: inside the
-self-consistent loop it is obtained by decoding the far-end bitstream through
-**each system's own** codec path, and that echo is then convolved with the *same*
-RIR and mixed with the *same* near-end speech.
+only the **transmitted far-end output**: inside the self-consistent loop it is
+obtained by encoding and decoding the far-end speech through **each system's
+own** codec path. That transmitted output is then convolved with the *same* RIR
+to form the echo, which is mixed with the *same* near-end speech.
 
 Each system therefore sees its own microphone mixture — both are provided in the
 page (UniCoRe loop / DeepVQE loop) — while the comparison remains fair and

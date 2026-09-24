@@ -65,19 +65,18 @@ CONDITIONS = {
         blurb="Self-consistent closed-loop double-talk set. Baseline: DeepVQE "
               "cascaded with the same frozen CleanCodec.",
         protocol="""<strong>How to read this condition.</strong> For each test
-                 utterance the <em>near-end speech</em>, the <em>far-end
-                 speech</em> to be played out, the <em>room impulse response
-                 (RIR)</em> and the <em>signal-to-echo ratio (SER, &minus;20 to
-                 10 dB)</em> are fixed once and shared by every system. The only
-                 quantity that differs is the far-end waveform that is actually
-                 played back: inside the closed loop it is obtained by decoding
-                 the far-end bitstream through <em>each system's own</em> codec
-                 path, and the resulting echo is then convolved with the same RIR
-                 and mixed with the same near-end speech. Both microphone
-                 mixtures are therefore shown above; the comparison stays fair and
-                 reproducible because the utterances, echo paths and levels are
-                 identical &mdash; only the system's own transmit/receive chain
-                 differs.""",
+                 utterance the <em>near-end speech</em>, the <em>far-end speech</em>
+                 to be transmitted, the <em>room impulse response (RIR)</em> and the
+                 <em>signal-to-echo ratio (SER, &minus;20 to 10 dB)</em> are fixed
+                 once and shared by every system. The only quantity that differs is
+                 the <em>transmitted far-end output</em>: inside the closed loop it
+                 is obtained by encoding and decoding the far-end speech through
+                 <em>each system's own</em> codec path. That transmitted output is
+                 then convolved with the same RIR to form the echo and mixed with
+                 the same near-end speech, so every system sees its own microphone
+                 mixture (both are shown above). The comparison stays fair and
+                 reproducible &mdash; the utterances, echo paths and levels are
+                 identical; only the transmit/receive chain differs.""",
         baseline="deepvqe",
         baseline_label="DeepVQE + CleanCodec",
         input_label="Microphone input (UniCoRe loop)",
