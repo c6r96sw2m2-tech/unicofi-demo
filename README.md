@@ -7,6 +7,10 @@ Open [`index.html`](index.html) to listen (locally, or through GitHub Pages).
 For every condition the page plays the degraded input, the clean reference, the
 task-specific baseline, and UniCoRe.
 
+Without GitHub Pages you can still listen straight from the repository:
+[`links.md`](links.md) lists a direct link for every clip (clicking a `.wav`
+plays or downloads it), and opening any `.wav` in the file browser gives a player.
+
 ## What is compared
 
 Three task-specific baselines, each cascaded with the **same frozen CleanCodec**
@@ -60,6 +64,7 @@ exported file match the corresponding evaluation record.
 
 ```
 index.html                 # listening page (generated)
+links.md                   # direct links to every clip (generated)
 audio/<condition>/sample<k>/{input,clean,unicore,<baseline>}.wav
 tools/build_samples.py     # collects + converts the clips (24 kHz mono PCM16)
 tools/build_page.py        # regenerates index.html
