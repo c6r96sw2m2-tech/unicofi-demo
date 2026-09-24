@@ -29,7 +29,7 @@ TEST = f"{ROOT}/stage2_student/offline_test_distorted"
 UC = f"{ROOT}/stage2_student_v2_1/exp/exp_asa_film_v2"
 DP = f"{ROOT}/dpcrn_local_train/eval/results/eval_samples/Track2/high"
 DV = (f"{ROOT}/deepvqe/exp/deepvqe_24k_cleancodec_2026-09-05-13h21m/test_results/"
-      "self_consistent_cleancodec_spec2codec/eval_samples/Track2/high")
+      "self_consistent_cleancodec/eval_samples/Track2/high")
 AB = (f"{ROOT}/AP-BWE/checkpoints/"
       "AP-BWE_8kto24k_local_256_disc_half_2026-09-22-22h18m16s/test_results/"
       "apbwe_256_disc_half_cleancodec_g180000/eval_samples/Track2/high/bwe/"
@@ -68,7 +68,7 @@ PLAN = {
         },
     ),
     "aec": dict(
-        indices=[205, 64, 56],
+        indices=[185, 104, 35],
         sources={
             "input":   f"{UC}/eval_samples_closed_loop/Track2/high/aec/best_model_395/mic/{{idx:06d}}_mic.wav",
             "input_bl": f"{DV}/aec/best_model_0385/mic/{{idx:06d}}_mic.wav",

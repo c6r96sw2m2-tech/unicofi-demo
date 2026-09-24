@@ -32,7 +32,7 @@ noisy/reverb/BWE, ESTOI for AEC):
 | Noisy | PESQ 3.20 / 3.09 / 2.88 (baseline 2.03 / 1.96 / 1.77) |
 | Reverberant | PESQ 2.77 / 2.91 / 2.54 (baseline 1.55 / 1.71 / 1.40) |
 | Band-limited | PESQ 2.93 / 3.38 / 3.56 (baseline 1.79 / 2.45 / 2.64) |
-| Echo (double-talk) | ESTOI 85.2 / 91.7 / 87.6 % (baseline 22.6 / 36.3 / 32.2 %) |
+| Echo (double-talk) | ESTOI 88.6 / 93.9 / 88.8 % (baseline 59.2 / 79.3 / 78.3 %) |
 
 ### How the AEC condition is built
 
@@ -50,6 +50,11 @@ reproducible: identical utterances, identical echo paths, identical levels, and
 the same frozen receiver codec. For the noisy, reverberant and band-limited
 conditions the degraded input is one and the same file for all systems, so those
 rows are directly comparable as well.
+
+All clips are taken from the same runs that produced the numbers reported in the
+paper, and were re-scored with the paper's metric implementation (ESTOI/PESQ
+recomputed per clip) to confirm the pairing: the per-clip scores of every
+exported file match the corresponding evaluation record.
 
 ## Layout
 
