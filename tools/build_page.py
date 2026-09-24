@@ -84,11 +84,10 @@ CONDITIONS = {
                      "before", 1)],
         metrics=dict(
             header=["System", "ESTOI (%)↑", "PESQ↑", "UTMOS↑",
-                    "AECMOS (Echo)↑", "AECMOS (Other)↑", "ERLE (dB)↑"],
+                    "AECMOS (Echo)↑", "AECMOS (Other)↑"],
             rows=[["DeepVQE + CleanCodec", "68.71", "1.79", "2.63", "4.52",
-                   "3.63", "42.44"],
-                  ["UniCoRe", "76.30", "2.06", "3.28", "4.60", "3.91",
-                   "61.81"]],
+                   "3.63"],
+                  ["UniCoRe", "76.30", "2.06", "3.28", "4.60", "3.91"]],
         ),
     ),
 }
